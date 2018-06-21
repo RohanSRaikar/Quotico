@@ -2,8 +2,8 @@
 export default [
     {
       category: 'inspirational',
-      quotes:[{
-          id: '1',
+      quotes:[{ 
+          id: '1', 
           person: 'Theodore Roosevelt',
           text: 'Believe you can and you\'re halfway there'
         },

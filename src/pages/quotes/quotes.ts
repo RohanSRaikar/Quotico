@@ -43,5 +43,13 @@ export class QuotesPage implements OnInit {
     });
     alert.present();
   }
+
+  onRemoveToFav(quote:Quote){
+
+  }
+
+  isFavourite(quote:Quote){
+      return this.quoteService.isQuoteFavourite(quote);
+  }
   
 }
