@@ -25,11 +25,13 @@ export class FavouritesPage {
      modal.onDidDismiss((remove:boolean)=> {
        //remove quote from the array
        if(remove){
-          this.quoteService.removeQuoteFromFav(quote);
-          this.quotes = this.quoteService.getFavQuotes(); 
+          this.onRemoveFromFav(quote);
        } 
      });
-    
-
  }
+ onRemoveFromFav(quote:Quote){
+  this.quoteService.removeQuoteFromFav(quote);
+  this.quotes = this.quoteService.getFavQuotes();
+ }
+
 }

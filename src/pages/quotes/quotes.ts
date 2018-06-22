@@ -45,7 +45,29 @@ export class QuotesPage implements OnInit {
   }
 
   onRemoveToFav(quote:Quote){
-
+    const alert = this.alrtCtrl.create({
+      title: 'Remove Quote',
+      subTitle: 'Are you sure?',
+      message: 'Are you sure you want to remove quote from favourite?',
+      buttons: [
+        {
+          text: 'Yes, go ahead',
+          handler: () => {
+            console.log("OK");
+            this.quoteService.removeQuoteFromFav(quote);
+          }
+        },
+        {
+          text: 'No, i changed my mind.',
+          role:'cancel',
+          handler: () => {
+            console.log("Cancelled")
+          }
+        }
+      ]
+    });
+    alert.present();
+      
   }
 
   isFavourite(quote:Quote){
